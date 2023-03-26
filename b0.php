@@ -28,5 +28,7 @@ $note_text="Тема : $urok \r\nИмя : $name1 \r\n Email : $email1 \r\n До�
 
 if (isset($name1)  &&  isset ($sab) ) {
 mail($address,$urok,$note_text,"Content-type:text/plain; windows-1251"); 
-
+// сообщение после отправки формы
+    
+echo "<p style='color:green;'>Уважаемый(ая) <b style='color:red;'>$name1</b> Ваше письмо отправленно успешно. <br> Спасибо. <br>Вам скоро ответят на почту <b style='color:red;'> $email1</b>.</p>";
 }
