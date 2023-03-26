@@ -31,4 +31,11 @@ mail($address,$urok,$note_text,"Content-type:text/plain; windows-1251");
 // сообщение после отправки формы
     
 echo "<p style='color:green;'>Уважаемый(ая) <b style='color:red;'>$name1</b> Ваше письмо отправленно успешно. <br> Спасибо. <br>Вам скоро ответят на почту <b style='color:red;'> $email1</b>.</p>";
+
+    /* cURL will start a new cookie session and ignore any previous cookies */
+curl_setopt($ch, CURLOPT_COOKIESESSION, true);
+/* this is the name of the file where cURL should save cookie information */
+curl_setopt($ch, CURLOPT_COOKIEJAR, 'cookie.txt'); 
+// could be empty, but cause problems on some hosts
+
 }
